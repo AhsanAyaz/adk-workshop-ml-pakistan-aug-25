@@ -28,8 +28,8 @@ Welcome to this hands-on 1-hour workshop where you'll learn to build, deploy, an
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/ai-agents-google-adk
-cd ai-agents-google-adk
+git clone https://github.com/AhsanAyaz/adk-workshop-ml-pakistan-aug-25
+cd adk-workshop-ml-pakistan-aug-25
 
 # Create virtual environment
 python -m venv .venv
