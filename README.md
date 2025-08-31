@@ -50,7 +50,7 @@ Let's start by creating our first AI agent that can help with marketing tasks.
 
 ### Create Your First Agent
 
-Create a new folder `workshop/simple_agent/` and add `agent.py`:
+Create a new folder `simple_agent/` and add `agent.py`:
 
 ```python
 import os
@@ -78,7 +78,7 @@ root_agent = Agent(
 adk web
 
 # Navigate to localhost:8000 in your browser
-# Select 'workshop/simple_agent' from the dropdown
+# Select 'simple_agent' from the dropdown
 # Try: "Create a tagline for a sustainable coffee brand"
 ```
 
@@ -92,7 +92,7 @@ Now let's create multiple agents that work in sequence - each agent passes its o
 
 ### Create Sequential Workflow
 
-Create `workshop/sequential_agents/agent.py`:
+Create `sequential_agents/agent.py`:
 
 ```python
 import os
@@ -156,7 +156,7 @@ root_agent = SequentialAgent(
 
 ```bash
 adk web
-# Select 'workshop/sequential_agents'
+# Select 'sequential_agents'
 # Try: "Create marketing content for eco-friendly water bottles"
 ```
 
@@ -170,7 +170,7 @@ Sometimes you want agents to work simultaneously on different aspects of the sam
 
 ### Create Parallel Workflow
 
-Create `workshop/parallel_agents/agent.py`:
+Create `parallel_agents/agent.py`:
 
 ```python
 import os
@@ -249,7 +249,7 @@ root_agent = SequentialAgent(
 
 ```bash
 adk web
-# Select 'workshop/parallel_agents'
+# Select 'parallel_agents'
 # Try: "Create a complete marketing campaign for a new fitness app"
 ```
 
@@ -263,7 +263,7 @@ Let's add tools to make our agents more powerful. Tools are Python functions tha
 
 ### Create Agent with Tools
 
-Create `workshop/tools_agent/agent.py`:
+Create `tools_agent/agent.py`:
 
 ```python
 import os
@@ -324,7 +324,7 @@ root_agent = Agent(
 
 ```bash
 adk web
-# Select 'workshop/tools_agent'
+# Select 'tools_agent'
 # Try: "What's today's date and help me plan a seasonal campaign?"
 # Try: "If my startup has $100,000 revenue, what should my marketing budget be?"
 ```
@@ -372,7 +372,7 @@ gsutil mb gs://your-unique-bucket-name-for-agents
 pip install "google-cloud-aiplatform[adk,agent_engines]" cloudpickle
 ```
 
-5. **Create deployment configuration** in `workshop/deploy_agent/`:
+5. **Create deployment configuration** in `deploy_agent/`:
 
 Create `.env` file:
 
@@ -394,7 +394,7 @@ Create `agent.py` (copy your best agent from previous steps):
 
 ```bash
 # Navigate to your agent directory
-cd workshop/deploy_agent
+cd deploy_agent
 
 # Initialize Vertex AI (this sets up the staging bucket)
 python -c "import vertexai; vertexai.init(project='your_project_id', location='us-central1', staging_bucket='gs://your-unique-bucket-name-for-agents')"
